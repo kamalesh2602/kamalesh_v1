@@ -13,13 +13,11 @@ import {
 
 function ProjectDetail() {
   const { slug } = useParams();
-
   const project = projects.find((p) => p.slug === slug);
 
-  // Elegant Glassmorphic 404 Error State
   if (!project) {
     return (
-      <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] p-10">
+      <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] p-10 cyber-grid">
         <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center shadow-2xl backdrop-blur-xl">
           <h1 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-violet-400">
             Project not found
@@ -34,16 +32,13 @@ function ProjectDetail() {
   }
 
   return (
-    // Base layout: Continues the deep cyber gradient story line
-    <section className="relative min-h-screen bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] px-4 py-16 text-white md:px-6">
-
-      {/* Dynamic glowing background backdrops */}
-      <div className="absolute right-[-10%] top-[10%] -z-10 h-[500px] w-[500px] rounded-full bg-indigo-500/20 blur-[130px]" />
-      <div className="absolute left-[-5%] bottom-[10%] -z-10 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[120px]" />
+    <section className="relative min-h-screen bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] px-4 py-16 text-white md:px-6 cyber-grid">
+      
+      {/* Precision engineered subpage matrix lighting grids */}
+      <div className="absolute top-0 right-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.06),transparent_45%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_bottom_left,rgba(34,211,238,0.04),transparent_45%)] pointer-events-none" />
 
       <div className="mx-auto max-w-5xl">
-
-        {/* Dynamic Back Button with Glass Morph Hover */}
         <Link
           to="/"
           className="group mb-10 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-neutral-300 shadow-md backdrop-blur-md transition-all duration-300 hover:bg-white/[0.12] hover:text-white hover:-translate-x-1"
@@ -58,13 +53,12 @@ function ProjectDetail() {
             {project.title}
           </h1>
 
-          {/* Featured Image with Acrylic Shadow and Border Ring */}
           {project.image && (
             <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/40 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c20]/60 to-transparent opacity-60 pointer-events-none" />
             </div>
@@ -73,8 +67,6 @@ function ProjectDetail() {
 
         {/* Content Bento Cluster Structure */}
         <div className="grid gap-6 md:grid-cols-3">
-
-          {/* Overview Block (Occupies 2 columns on wide screens) */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8 md:col-span-2">
             <div className="mb-4 flex items-center gap-3 text-cyan-400">
               <FaCogs size={20} />
@@ -85,7 +77,6 @@ function ProjectDetail() {
             </p>
           </div>
 
-          {/* Tech Stack Block (Occupies 1 column) */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8">
             <div className="mb-4 flex items-center gap-3 text-violet-400">
               <FaLayerGroup size={18} />
@@ -103,7 +94,6 @@ function ProjectDetail() {
             </div>
           </div>
 
-          {/* Features Block (Full width across columns) */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8 md:col-span-3">
             <div className="mb-6 flex items-center gap-3 text-indigo-400">
               <FaTasks size={20} />
@@ -121,7 +111,7 @@ function ProjectDetail() {
               ))}
             </ul>
           </div>
-          {/* Problem & Solution */}
+
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8 md:col-span-3">
             <div className="mb-6 flex items-center gap-3 text-cyan-400">
               <FaCheckCircle size={18} />
@@ -129,74 +119,41 @@ function ProjectDetail() {
                 Problem & Solution
               </h2>
             </div>
-
             <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <h3 className="mb-3 font-bold text-white">
-                  Problem
-                </h3>
-
-                <p className="leading-relaxed text-neutral-300">
-                  {project.problem}
-                </p>
+                <h3 className="mb-3 font-bold text-white">Problem</h3>
+                <p className="leading-relaxed text-neutral-300">{project.problem}</p>
               </div>
-
               <div>
-                <h3 className="mb-3 font-bold text-white">
-                  Solution
-                </h3>
-
-                <p className="leading-relaxed text-neutral-300">
-                  {project.solution}
-                </p>
+                <h3 className="mb-3 font-bold text-white">Solution</h3>
+                <p className="leading-relaxed text-neutral-300">{project.solution}</p>
               </div>
             </div>
           </div>
 
-          {/* Challenges */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8">
             <div className="mb-4 flex items-center gap-3 text-amber-400">
               <FaExclamationTriangle size={18} />
-
-              <h2 className="text-xl font-bold uppercase tracking-wider text-amber-300">
-                Challenges
-              </h2>
+              <h2 className="text-xl font-bold uppercase tracking-wider text-amber-300">Challenges</h2>
             </div>
-
             <ul className="space-y-3">
               {project.challenges.map((challenge) => (
-                <li
-                  key={challenge}
-                  className="text-neutral-300"
-                >
-                  • {challenge}
-                </li>
+                <li key={challenge} className="text-neutral-300">• {challenge}</li>
               ))}
             </ul>
           </div>
 
-          {/* Learnings */}
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8">
             <div className="mb-4 flex items-center gap-3 text-green-400">
               <FaLightbulb size={18} />
-
-              <h2 className="text-xl font-bold uppercase tracking-wider text-green-300">
-                Learnings
-              </h2>
+              <h2 className="text-xl font-bold uppercase tracking-wider text-green-300">Learnings</h2>
             </div>
-
             <ul className="space-y-3">
               {project.learnings.map((learning) => (
-                <li
-                  key={learning}
-                  className="text-neutral-300"
-                >
-                  • {learning}
-                </li>
+                <li key={learning} className="text-neutral-300">• {learning}</li>
               ))}
             </ul>
           </div>
-
         </div>
 
         {/* Action Anchor Bar */}

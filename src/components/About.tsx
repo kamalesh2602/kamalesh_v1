@@ -5,11 +5,15 @@ function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] px-6 py-28 text-white"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] px-6 py-28 text-white cyber-grid"
     >
-      {/* Immersive background glow elements */}
-      <div className="absolute left-[-10%] top-[30%] -z-10 h-[400px] w-[400px] rounded-full bg-violet-500/10 blur-[130px]" />
-      <div className="absolute right-[5%] top-[10%] -z-10 h-[350px] w-[350px] rounded-full bg-cyan-500/15 blur-[110px]" />
+      {/* Structural Horizon Accent Lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.02] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.02] to-transparent pointer-events-none" />
+
+      {/* Structured mathematical corner lighting meshes */}
+      <div className="absolute top-0 left-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_top_left,rgba(139,92,246,0.04),transparent_45%)] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.03),transparent_45%)] pointer-events-none" />
 
       <div className="mx-auto max-w-6xl">
         
@@ -30,12 +34,9 @@ function About() {
         {/* Asymmetric Split Layout Grid */}
         <div className="grid gap-8 lg:grid-cols-12">
           
-          {/* Left Column: Core Narrative Card (Spans 7 columns on large viewports) */}
+          {/* Left Column: Core Narrative Card */}
           <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-8 shadow-2xl backdrop-blur-xl sm:p-10 lg:col-span-7 flex flex-col justify-center">
             
-            {/* Ambient top hairline layout strip */}
-            <div className="absolute top-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-violet-400/20 to-transparent" />
-
             <div className="space-y-6 text-base leading-relaxed text-neutral-300 md:text-lg">
               <p>
                 I’m a <span className="text-white font-semibold">Computer Science student</span> at {profile.college} specializing 
@@ -56,7 +57,7 @@ function About() {
             </div>
           </div>
 
-          {/* Right Column: Quick Profile Highlights Bento Cards (Spans 5 columns) */}
+          {/* Right Column: Quick Profile Highlights Bento Cards */}
           <div className="grid gap-4 sm:grid-cols-3 lg:col-span-5 lg:grid-cols-1">
             
             {/* Highlight Card 1: Education */}

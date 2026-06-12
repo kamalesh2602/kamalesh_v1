@@ -1,16 +1,15 @@
 import { FaEnvelope, FaGithub, FaLinkedin, FaHandshake, FaArrowRight } from "react-icons/fa";
 import { socials } from "../data/socials";
 
-
 function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] px-6 py-32 text-white"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] px-6 py-32 text-white cyber-grid"
     >
-      {/* High-saturation structural neon blobs behind the contact command center */}
-      <div className="absolute left-[15%] top-[20%] -z-10 h-[350px] w-[350px] rounded-full bg-rose-500/15 blur-[110px]" />
-      <div className="absolute right-[10%] bottom-[10%] -z-10 h-[400px] w-[400px] rounded-full bg-cyan-500/15 blur-[130px]" />
+      {/* Precision engineered vector light fields */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(244,63,94,0.04),transparent_50%)] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_90%_90%,rgba(34,211,238,0.03),transparent_40%)] pointer-events-none" />
 
       <div className="mx-auto max-w-4xl">
         
@@ -22,7 +21,7 @@ function Contact() {
 
           {/* Sub-badge Header */}
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 shadow-inner backdrop-blur-md">
-            <FaHandshake size={14} className="text-rose-400 animate-pulse" />
+            <FaHandshake size={14} className="text-rose-400" />
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-rose-300">
               Get In Touch
             </p>

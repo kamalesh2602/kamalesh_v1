@@ -1,7 +1,6 @@
 import { skills } from "../data/skills";
 import { FaTerminal } from "react-icons/fa";
 
-// 1. Defined an explicit interface for the SkillTag component props
 interface SkillTagProps {
   skill: string;
   index: number;
@@ -15,11 +14,11 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] py-28 text-white"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] py-28 text-white cyber-grid"
     >
-      {/* Background ambient lighting fields */}
-      <div className="absolute right-[-10%] top-1/4 -z-10 h-[400px] w-[400px] rounded-full bg-violet-600/15 blur-[120px] pointer-events-none" />
-      <div className="absolute left-[-15%] bottom-1/4 -z-10 h-[400px] w-[400px] rounded-full bg-cyan-500/15 blur-[120px] pointer-events-none" />
+      {/* High-definition architectural lighting vector meshes */}
+      <div className="absolute top-0 right-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_top_right,rgba(167,139,250,0.05),transparent_40%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_bottom_left,rgba(34,211,238,0.04),transparent_40%)] pointer-events-none" />
 
       {/* Header Container */}
       <div className="mx-auto max-w-6xl px-6 mb-16">
@@ -37,8 +36,6 @@ function Skills() {
 
       {/* INFINITE MOTION SCROLL TRACKS ASSEMBLY */}
       <div className="flex flex-col gap-6 w-full overflow-hidden mask-fade-edges">
-        
-        {/* Track 1: Moving Leftwards */}
         <div className="marquee-container flex overflow-hidden select-none gap-4">
           <div className="marquee-content flex shrink-0 items-center justify-around gap-4 min-w-full animate-marquee-left">
             {[...track1, ...track1, ...track1].map((skill, index) => (
@@ -47,7 +44,6 @@ function Skills() {
           </div>
         </div>
 
-        {/* Track 2: Moving Rightwards */}
         <div className="marquee-container flex overflow-hidden select-none gap-4">
           <div className="marquee-content flex shrink-0 items-center justify-around gap-4 min-w-full animate-marquee-right">
             {[...track2, ...track2, ...track2].map((skill, index) => (
@@ -55,10 +51,8 @@ function Skills() {
             ))}
           </div>
         </div>
-
       </div>
 
-      {/* This CSS is fully valid here, keep it! */}
       <style>{`
         @keyframes marqueeLeft {
           0% { transform: translateX(0%); }
@@ -68,18 +62,9 @@ function Skills() {
           0% { transform: translateX(-33.33%); }
           100% { transform: translateX(0%); }
         }
-        
-        .animate-marquee-left {
-          animation: marqueeLeft 25s linear infinite;
-        }
-        .animate-marquee-right {
-          animation: marqueeRight 25s linear infinite;
-        }
-        
-        .marquee-container:hover .marquee-content {
-          animation-play-state: paused !important;
-        }
-        
+        .animate-marquee-left { animation: marqueeLeft 28s linear infinite; }
+        .animate-marquee-right { animation: marqueeRight 28s linear infinite; }
+        .marquee-container:hover .marquee-content { animation-play-state: paused !important; }
         .mask-fade-edges {
           mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
           -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
@@ -89,7 +74,6 @@ function Skills() {
   );
 }
 
-// 2. Attached the explicit TypeScript props definition interface here
 function SkillTag({ skill, index }: SkillTagProps) {
   const isEven = index % 2 === 0;
   const glowStyles = isEven 

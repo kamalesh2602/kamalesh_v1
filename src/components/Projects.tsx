@@ -9,10 +9,11 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] px-6 py-28 text-white"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] px-6 py-28 text-white cyber-grid"
     >
-      <div className="absolute right-[-5%] top-[20%] -z-10 h-[450px] w-[450px] rounded-full bg-violet-600/20 blur-[130px]" />
-      <div className="absolute left-[-5%] bottom-[20%] -z-10 h-[450px] w-[450px] rounded-full bg-cyan-500/10 blur-[130px]" />
+      {/* Precision grid ray-trace lights */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_75%_30%,rgba(139,92,246,0.06),transparent_45%)] pointer-events-none" />
+      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(circle_at_25%_80%,rgba(34,211,238,0.04),transparent_45%)] pointer-events-none" />
 
       <div className="mx-auto max-w-6xl">
         <div className="mb-14">
@@ -39,16 +40,15 @@ function Projects() {
                   <img
                     src={featured.image}
                     alt={featured.title}
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
                   />
                 ) : (
                   <div className="h-full w-full bg-white/[0.02]" />
                 )}
-
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c20]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#151035]/40" />
               </div>
 
-              <div className="flex flex-col justify-center p-8 lg:w-1/2 lg:p-12">
+              <div className="flex flex-1 flex-col justify-center p-8 lg:p-12">
                 <div>
                   <span className="mb-4 inline-block rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.15)]">
                     Featured Project
@@ -67,7 +67,7 @@ function Projects() {
                   {featured.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-lg border border-white/5 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-neutral-300"
+                      className="rounded-lg border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-purple-200"
                     >
                       {tech}
                     </span>
@@ -95,12 +95,11 @@ function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
                   />
                 ) : (
                   <div className="h-full w-full bg-white/[0.02]" />
                 )}
-
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c20]/40 to-transparent" />
               </div>
 
