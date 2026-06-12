@@ -50,9 +50,9 @@ export const projects = [
       "Razorpay",
     ],
 
-    screenshots: ["/projects/communityconnect.png","/projecsts/cc1.jpg"],
+    screenshots: ["/projects/communityconnect/cc1.jpg","/projects/communityconnect/cc2.jpg","/projects/communityconnect/cc3.jpg","/projects/communityconnect/cc4.jpg","/projects/communityconnect/cc5.jpg"],
 
-    image: "/projects/communityconnect.png",
+    image: "/projects/communityconnect/cc1.jpg",
 
     github: "https://github.com/kamalesh2602/CommunityConnect",
     live: "http://community-connect-pi-ten.vercel.app/",
@@ -226,9 +226,9 @@ export const projects = [
       "Streamlit",
     ],
 
-    screenshots: ["/projects/diamond.png"],
+    screenshots: ["/projects/diamond/diamond.png","/projects/diamond/eda.png","/projects/diamond/model.png"],
 
-    image: "/projects/diamond.png",
+    image: "/projects/diamond/diamond.png",
 
     github: "https://github.com/kamalesh2602/Diamond-price-prediction",
     live: "",
@@ -279,13 +279,75 @@ export const projects = [
       "MongoDB",
     ],
 
-    screenshots: ["/projects/wellnest.png"],
+    screenshots: ["/projects/wellnest/w1.jpg","/projects/wellnest/w2.jpg","/projects/wellnest/w3.jpg","/projects/wellnest/w4.jpg"],
 
-    image: "/projects/wellnest.png",
+    image: "/projects/wellnest/w1.jpg",
 
     github: "https://github.com/kamalesh2602/wellnest",
     live: "https://wellnestadl.netlify.app/",
 
     featured: false,
   },
+
+  {
+  title: "LangChain Learning Assistant",
+  slug: "learning-assistant",
+
+  shortDescription:
+    "AI-powered learning assistant built with LangChain and Streamlit.",
+
+  overview:
+    "An intelligent learning platform that helps users understand topics, generate quizzes, evaluate answers, and track learning progress through a multi-agent AI workflow.",
+
+  problem:
+    "Self-learning often lacks personalized guidance, structured feedback, and progress tracking, making it difficult for learners to stay engaged and measure improvement.",
+
+  solution:
+    "Developed an AI-powered learning assistant that generates explanations, creates quizzes, evaluates responses, and provides progress insights using LangChain agents and workflow orchestration.",
+
+  features: [
+    "Topic explanation generation",
+    "Quiz generation",
+    "Answer evaluation and feedback",
+    "Learning plan creation",
+    "Progress tracking dashboard",
+    "Human-in-the-loop approval workflow",
+    "Multi-agent routing system",
+  ],
+
+  challenges: [
+    "Designing agent orchestration workflows",
+    "Managing application state across interactions",
+    "Implementing dynamic request routing",
+    "Integrating tool calling and structured outputs",
+  ],
+
+  learnings: [
+    "LangChain fundamentals",
+    "Multi-agent systems",
+    "Tool calling",
+    "State management",
+    "Structured outputs with Pydantic",
+    "Human-in-the-loop workflows",
+    "Streamlit application development",
+  ],
+
+  tech: [
+    "Python",
+    "LangChain",
+    "Streamlit",
+    "OpenRouter",
+    "Qwen 3 8B",
+    "Pydantic",
+  ],
+
+  screenshots: ["/projects/langchain_learning_assistant/explain.png","/projects/langchain_learning_assistant/llaHome.png","/projects/langchain_learning_assistant/quiz.png"],
+
+  image: "/projects/langchain_learning_assistant/llaHome.png",
+
+  github: "https://github.com/kamalesh2602/Langchain_Learning_assistant",
+  live: "",
+
+  featured: true,
+}
 ];
