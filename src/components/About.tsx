@@ -38,21 +38,20 @@ function About() {
 
             <div className="space-y-6 text-base leading-relaxed text-neutral-300 md:text-lg">
               <p>
-                I'm a <span className="text-white font-semibold">Computer Science student</span> at {profile.college}, 
-                deeply focused on full-stack web architectures with hands-on experience crafting and deploying 
-                end-to-end applications from scratch.
+                I’m a <span className="text-white font-semibold">Computer Science student</span> at {profile.college} specializing 
+                in architecting modern full-stack ecosystems. I thrive on stripping away development complexity, turning raw 
+                concepts into production-ready, hands-on digital applications built from the ground up.
               </p>
 
               <p>
-                Beyond standard web ecosystems, I actively explore applied AI landscapes. My current projects involve 
-                integrating Large Language Models, engineering <span className="text-cyan-300 font-medium">Retrieval-Augmented Generation (RAG)</span> components, 
-                and spinning up machine learning backends. I love navigating the entire lifecycle of a product, pulling ideas 
-                into production-ready instances.
+                Driven by curiosity, I regularly bridge the gap between traditional software systems and emerging AI pipelines. 
+                My recent technical focus centers on engineering custom <span className="text-cyan-300 font-medium">Retrieval-Augmented Generation (RAG)</span> architectures, 
+                integrating foundational LLMs, and spinning up scalable machine learning backends to build apps that think.
               </p>
 
               <p>
-                Right now, I'm seeking <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-300 font-bold">software engineering and web/AI dev internships</span> where 
-                I can inject value, ship impact, and scale my engineering fundamentals within a strong technical team.
+                Right now, I'm looking to bring this energy to an impactful <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-violet-300 font-bold">software engineering or AI development internship</span>. 
+                My goal is simple: join an ambitious engineering team, ship performance-driven code, and solve real, non-trivial problems at scale.
               </p>
             </div>
           </div>
