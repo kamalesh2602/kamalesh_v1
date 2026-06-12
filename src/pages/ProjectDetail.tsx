@@ -1,103 +1,229 @@
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../data/projects";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaArrowLeft,
+  FaCogs,
+  FaTasks,
+  FaLayerGroup, FaLightbulb,
+  FaExclamationTriangle,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 function ProjectDetail() {
   const { slug } = useParams();
 
-  const project = projects.find(
-    (p) => p.slug === slug
-  );
+  const project = projects.find((p) => p.slug === slug);
 
+  // Elegant Glassmorphic 404 Error State
   if (!project) {
     return (
-      <div className="p-10">
-        <h1 className="text-3xl font-bold">
-          Project not found
-        </h1>
+      <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] p-10">
+        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center shadow-2xl backdrop-blur-xl">
+          <h1 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-violet-400">
+            Project not found
+          </h1>
+          <p className="mt-2 text-neutral-400">The project you are looking for does not exist.</p>
+          <Link to="/" className="mt-6 inline-flex items-center gap-2 text-cyan-400 hover:underline">
+            <FaArrowLeft size={14} /> Back to Safety
+          </Link>
+        </div>
       </div>
     );
   }
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <Link
-        to="/"
-        className="mb-8 inline-block text-blue-600"
-      >
-        ← Back to Home
-      </Link>
+    // Base layout: Continues the deep cyber gradient story line
+    <section className="relative min-h-screen bg-gradient-to-br from-[#0f0c20] via-[#151035] to-[#2d124d] px-4 py-16 text-white md:px-6">
 
-      <h1 className="mb-6 text-5xl font-bold">
-        {project.title}
-      </h1>
+      {/* Dynamic glowing background backdrops */}
+      <div className="absolute right-[-10%] top-[10%] -z-10 h-[500px] w-[500px] rounded-full bg-indigo-500/20 blur-[130px]" />
+      <div className="absolute left-[-5%] bottom-[10%] -z-10 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[120px]" />
 
-      {project.image && (
-        <img
-          src={project.image}
-          alt={project.title}
-          className="mb-10 w-full rounded-3xl"
-        />
-      )}
+      <div className="mx-auto max-w-5xl">
 
-      <div className="mb-10">
-        <h2 className="mb-3 text-2xl font-semibold">
-          Overview
-        </h2>
-
-        <p className="text-slate-600">
-          {project.overview}
-        </p>
-      </div>
-
-      <div className="mb-10">
-        <h2 className="mb-3 text-2xl font-semibold">
-          Features
-        </h2>
-
-        <ul className="list-disc space-y-2 pl-6 text-slate-600">
-          {project.features.map((feature) => (
-            <li key={feature}>{feature}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mb-10">
-        <h2 className="mb-3 text-2xl font-semibold">
-          Tech Stack
-        </h2>
-
-        <div className="flex flex-wrap gap-3">
-          {project.tech.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full border px-4 py-2"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex flex-wrap gap-4">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full bg-slate-900 px-6 py-3 text-white"
+        {/* Dynamic Back Button with Glass Morph Hover */}
+        <Link
+          to="/"
+          className="group mb-10 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 text-sm font-semibold text-neutral-300 shadow-md backdrop-blur-md transition-all duration-300 hover:bg-white/[0.12] hover:text-white hover:-translate-x-1"
         >
-          GitHub
-        </a>
+          <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-0.5" />
+          <span>Back to Home</span>
+        </Link>
 
-        {project.live && (
+        {/* Project Header Card */}
+        <div className="mb-10 rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-6 shadow-2xl backdrop-blur-xl sm:p-10">
+          <h1 className="mb-8 text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-neutral-400 sm:text-5xl md:text-6xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+            {project.title}
+          </h1>
+
+          {/* Featured Image with Acrylic Shadow and Border Ring */}
+          {project.image && (
+            <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/40 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c20]/60 to-transparent opacity-60 pointer-events-none" />
+            </div>
+          )}
+        </div>
+
+        {/* Content Bento Cluster Structure */}
+        <div className="grid gap-6 md:grid-cols-3">
+
+          {/* Overview Block (Occupies 2 columns on wide screens) */}
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8 md:col-span-2">
+            <div className="mb-4 flex items-center gap-3 text-cyan-400">
+              <FaCogs size={20} />
+              <h2 className="text-xl font-bold uppercase tracking-wider text-cyan-300">Overview</h2>
+            </div>
+            <p className="text-lg leading-relaxed text-neutral-300">
+              {project.overview}
+            </p>
+          </div>
+
+          {/* Tech Stack Block (Occupies 1 column) */}
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8">
+            <div className="mb-4 flex items-center gap-3 text-violet-400">
+              <FaLayerGroup size={18} />
+              <h2 className="text-xl font-bold uppercase tracking-wider text-violet-300">Tech Stack</h2>
+            </div>
+            <div className="flex flex-wrap gap-2.5">
+              {project.tech.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-xl border border-white/10 bg-white/[0.06] px-3.5 py-2 text-sm font-medium text-purple-200 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-400/40 hover:text-white"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Features Block (Full width across columns) */}
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8 md:col-span-3">
+            <div className="mb-6 flex items-center gap-3 text-indigo-400">
+              <FaTasks size={20} />
+              <h2 className="text-xl font-bold uppercase tracking-wider text-indigo-300">Key Features</h2>
+            </div>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {project.features.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-start gap-3 rounded-2xl border border-white/5 bg-white/[0.02] p-4 text-neutral-300 transition-all duration-300 hover:bg-white/[0.05]"
+                >
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+                  <span className="leading-relaxed">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Problem & Solution */}
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8 md:col-span-3">
+            <div className="mb-6 flex items-center gap-3 text-cyan-400">
+              <FaCheckCircle size={18} />
+              <h2 className="text-xl font-bold uppercase tracking-wider text-cyan-300">
+                Problem & Solution
+              </h2>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 className="mb-3 font-bold text-white">
+                  Problem
+                </h3>
+
+                <p className="leading-relaxed text-neutral-300">
+                  {project.problem}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-3 font-bold text-white">
+                  Solution
+                </h3>
+
+                <p className="leading-relaxed text-neutral-300">
+                  {project.solution}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Challenges */}
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8">
+            <div className="mb-4 flex items-center gap-3 text-amber-400">
+              <FaExclamationTriangle size={18} />
+
+              <h2 className="text-xl font-bold uppercase tracking-wider text-amber-300">
+                Challenges
+              </h2>
+            </div>
+
+            <ul className="space-y-3">
+              {project.challenges.map((challenge) => (
+                <li
+                  key={challenge}
+                  className="text-neutral-300"
+                >
+                  • {challenge}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Learnings */}
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl backdrop-blur-xl sm:p-8">
+            <div className="mb-4 flex items-center gap-3 text-green-400">
+              <FaLightbulb size={18} />
+
+              <h2 className="text-xl font-bold uppercase tracking-wider text-green-300">
+                Learnings
+              </h2>
+            </div>
+
+            <ul className="space-y-3">
+              {project.learnings.map((learning) => (
+                <li
+                  key={learning}
+                  className="text-neutral-300"
+                >
+                  • {learning}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Action Anchor Bar */}
+        <div className="mt-10 flex flex-wrap justify-end gap-4 rounded-[2rem] border border-white/10 bg-white/[0.02] p-4 backdrop-blur-xl">
           <a
-            href={project.live}
+            href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-blue-600 px-6 py-3 text-white"
+            className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-3.5 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-neutral-900"
           >
-            Live Demo
+            <FaGithub size={18} />
+            <span>View Source</span>
           </a>
-        )}
+
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3.5 font-semibold text-white shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all duration-300 hover:from-cyan-400 hover:to-blue-500 hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]"
+            >
+              <FaExternalLinkAlt size={14} />
+              <span>Live Demo</span>
+            </a>
+          )}
+        </div>
+
       </div>
     </section>
   );

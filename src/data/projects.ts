@@ -1,56 +1,122 @@
-
-
 export const projects = [
   {
     title: "Community Connect",
     slug: "community-connect",
 
-    description:
-      "A platform connecting volunteers with NGOs based on interests, location, and opportunities.",
+    shortDescription:
+      "Requirement-driven platform connecting NGOs and volunteers.",
 
     overview:
-      "Community Connect bridges the gap between volunteers and NGOs by helping users discover opportunities based on their interests, skills, and location.",
+      "Community Connect is a MERN-stack platform that connects NGOs with volunteers through a requirement-driven system. NGOs post real-time requirements and volunteers can discover, donate, or directly communicate to help.",
+
+    problem:
+      "Many NGO platforms focus on listing organizations rather than highlighting urgent needs. Volunteers often struggle to discover where they can make the biggest impact.",
+
+    solution:
+      "A requirement-centric platform where NGOs post needs and volunteers receive updates, donate, communicate, and track contributions through a unified experience.",
 
     features: [
-      "Volunteer and NGO authentication",
-      "Opportunity discovery",
-      "Profile management",
-      "Organization listings",
+      "Volunteer, NGO and Admin authentication",
+      "Requirement feed",
+      "NGO verification system",
+      "Follow NGOs",
+      "Donation system using Razorpay",
+      "Volunteer-NGO chat",
+      "Notifications for new requirements",
+      "Activity tracking",
     ],
 
-    tech: ["React", "Node.js", "MongoDB"],
+    challenges: [
+      "Implementing role-based authentication",
+      "Managing NGO verification workflows",
+      "Integrating Razorpay payments",
+      "Designing requirement-driven architecture",
+    ],
 
-    image: "projects/communityconnect.png",
+    learnings: [
+      "JWT authentication",
+      "Role-based access control",
+      "Payment gateway integration",
+      "REST API development",
+      "MongoDB schema design",
+    ],
 
-    github: "https://github.com/kamalesh2602",
-    live: "https://community-connect-pi-ten.vercel.app/",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Razorpay",
+    ],
+
+    screenshots: ["/projects/communityconnect.png","/projecsts/cc1.jpg"],
+
+    image: "/projects/communityconnect.png",
+
+    github: "https://github.com/kamalesh2602/CommunityConnect",
+    live: "http://community-connect-pi-ten.vercel.app/",
 
     featured: true,
   },
 
   {
-    title: "WellNest",
-    slug: "wellnest",
+    title: "Workforce Management System with RAG",
+    slug: "workforce-management-rag",
 
-    description:
-      "Online counselling platform with scheduling and video consultation support.",
+    shortDescription:
+      "Workforce management platform powered by Retrieval-Augmented Generation.",
 
     overview:
-      "A mental wellness platform that helps users connect with counsellors and manage appointments online.",
+      "A workforce management system featuring intelligent team recommendations, project risk analysis, and an AI-powered project assistant using Retrieval-Augmented Generation.",
+
+    problem:
+      "Organizations struggle to allocate resources effectively and identify project risks early using traditional management systems.",
+
+    solution:
+      "Combined workforce management with vector search and RAG to recommend team members, analyze project risks, and answer project-related questions.",
 
     features: [
-      "User authentication",
-      "Appointment scheduling",
-      "Counsellor profiles",
-      "Session management",
+      "Admin dashboard",
+      "Employee portal",
+      "Project management",
+      "Intelligent team recommendations",
+      "Project risk analysis",
+      "AI project assistant",
+      "FAISS vector search",
+      "JWT authentication",
     ],
 
-    tech: ["React", "Node.js", "MongoDB"],
+    challenges: [
+      "Integrating Node.js and FastAPI services",
+      "Building vector-search workflows",
+      "Designing RAG pipelines",
+      "Managing multi-service architecture",
+    ],
+
+    learnings: [
+      "RAG architecture",
+      "Vector search",
+      "Microservice communication",
+      "Recommendation systems",
+      "FAISS integration",
+    ],
+
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "FastAPI",
+      "FAISS",
+      "SentenceTransformers",
+    ],
+
+    screenshots: [],
 
     image: "",
 
-    github: "https://github.com/kamalesh2602",
-    live: "https://google.com",
+    github: "https://github.com/kamalesh2602/WorkforceOS",
+    live: "",
 
     featured: false,
   },
@@ -59,24 +125,55 @@ export const projects = [
     title: "Research Paper Summarizer",
     slug: "research-paper-summarizer",
 
-    description:
-      "Multi-agent RAG system for summarizing and querying research papers.",
+    shortDescription:
+      "RAG-powered system for research paper summarization and analysis.",
 
     overview:
-      "An AI-powered application that uses Retrieval-Augmented Generation to summarize and answer questions from research papers.",
+      "An AI-powered application that summarizes research papers and enables semantic search and contextual question answering using Retrieval-Augmented Generation.",
+
+    problem:
+      "Research papers are lengthy and difficult to consume efficiently, making knowledge extraction time-consuming.",
+
+    solution:
+      "Built a RAG pipeline that indexes research papers into a vector database and enables summarization and intelligent question answering.",
 
     features: [
       "PDF ingestion",
       "Research paper summarization",
       "Semantic search",
       "Question answering",
+      "Vector embeddings",
+      "RAG pipeline",
     ],
 
-    tech: ["FastAPI", "Qdrant", "Streamlit"],
+    challenges: [
+      "Chunking large documents",
+      "Managing embedding quality",
+      "Vector database integration",
+      "Prompt engineering",
+    ],
+
+    learnings: [
+      "RAG architecture",
+      "Vector databases",
+      "Embedding models",
+      "FastAPI development",
+      "LLM integration",
+    ],
+
+    tech: [
+      "Python",
+      "FastAPI",
+      "Streamlit",
+      "Qdrant",
+      "Gemini",
+    ],
+
+    screenshots: [],
 
     image: "",
 
-    github: "https://github.com/kamalesh2602",
+    github: "https://github.com/kamalesh2602/Research_paper_summarizer-analyzer",
     live: "",
 
     featured: false,
@@ -86,52 +183,108 @@ export const projects = [
     title: "Diamond Price Prediction",
     slug: "diamond-price-prediction",
 
-    description:
-      "Machine learning model for predicting diamond prices using regression techniques.",
+    shortDescription:
+      "Machine learning system for diamond price prediction.",
 
     overview:
-      "A machine learning project that predicts diamond prices using various physical and quality-related features.",
+      "An end-to-end machine learning project that predicts diamond prices using multiple regression models and deploys predictions through a Streamlit application.",
+
+    problem:
+      "Estimating diamond prices manually can be difficult due to multiple influencing features and market variations.",
+
+    solution:
+      "Built and compared Linear Regression, Ridge Regression, and Lasso Regression models, selecting Ridge Regression as the best-performing model.",
 
     features: [
+      "Exploratory Data Analysis",
       "Data preprocessing",
       "Feature engineering",
-      "Model training",
-      "Price prediction",
+      "Model comparison",
+      "Performance evaluation",
+      "Streamlit deployment",
     ],
 
-    tech: ["Python", "Scikit-Learn", "Streamlit"],
+    challenges: [
+      "Feature selection",
+      "Data preprocessing",
+      "Model comparison",
+      "Preventing overfitting",
+    ],
 
-    image: "",
+    learnings: [
+      "Regression algorithms",
+      "Model evaluation metrics",
+      "Feature engineering",
+      "Data preprocessing",
+      "ML deployment with Streamlit",
+    ],
 
-    github: "https://github.com/kamalesh2602",
+    tech: [
+      "Python",
+      "Pandas",
+      "Scikit-Learn",
+      "Streamlit",
+    ],
+
+    screenshots: ["/projects/diamond.png"],
+
+    image: "/projects/diamond.png",
+
+    github: "https://github.com/kamalesh2602/Diamond-price-prediction",
     live: "",
 
     featured: false,
   },
 
   {
-    title: "Workforce Assistant",
-    slug: "workforce-assistant",
+    title: "WellNest",
+    slug: "wellnest",
 
-    description:
-      "AI-powered workforce management and recommendation system.",
+    shortDescription:
+      "Online mental wellness and counselling platform.",
 
     overview:
-      "An intelligent assistant designed to improve workforce productivity through AI-driven recommendations and planning.",
+      "A platform that enables users to connect with counsellors, schedule appointments, and manage mental wellness services online.",
+
+    problem:
+      "Accessing counselling services and scheduling sessions can be inconvenient and fragmented.",
+
+    solution:
+      "Provided a centralized platform for counsellor discovery, scheduling, and session management.",
 
     features: [
-      "Task recommendations",
-      "AI assistance",
-      "Workforce insights",
-      "Productivity tracking",
+      "User authentication",
+      "Counsellor profiles",
+      "Appointment scheduling",
+      "Session management",
     ],
 
-    tech: ["Node.js", "MongoDB", "Python"],
+    challenges: [
+      "Authentication flows",
+      "Appointment management",
+      "Frontend-backend integration",
+    ],
 
-    image: "",
+    learnings: [
+      "MERN stack development",
+      "REST APIs",
+      "Authentication",
+      "Database design",
+    ],
 
-    github: "https://github.com/kamalesh2602",
-    live: "",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
+
+    screenshots: ["/projects/wellnest.png"],
+
+    image: "/projects/wellnest.png",
+
+    github: "https://github.com/kamalesh2602/wellnest",
+    live: "https://wellnestadl.netlify.app/",
 
     featured: false,
   },
