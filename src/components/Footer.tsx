@@ -1,4 +1,4 @@
-import { FaHeart, FaChevronUp } from "react-icons/fa";
+import {  FaChevronUp } from "react-icons/fa";
 import { profile } from "../data/profile";
 
 function Footer() {
