@@ -231,7 +231,7 @@ export const projects = [
     image: "/projects/diamond/diamond.png",
 
     github: "https://github.com/kamalesh2602/Diamond-price-prediction",
-    live: "",
+    live: "https://diamond-price-prediction-tcbh8p7t8xax3jn4ugquhe.streamlit.app/",
 
     featured: false,
   },
@@ -281,7 +281,7 @@ export const projects = [
 
     screenshots: ["/projects/wellnest/w1.jpg","/projects/wellnest/w2.jpg","/projects/wellnest/w3.jpg","/projects/wellnest/w4.jpg"],
 
-    image: "/projects/wellnest/w1.jpg",
+    image: "/projects/wellnest/wn1.jpg",
 
     github: "https://github.com/kamalesh2602/wellnest",
     live: "https://wellnestadl.netlify.app/",
@@ -346,8 +346,8 @@ export const projects = [
   image: "/projects/langchain_learning_assistant/llaHome.png",
 
   github: "https://github.com/kamalesh2602/Langchain_Learning_assistant",
-  live: "",
+  live: "https://langchainlearningassistant-hnluvddvefjgzdvmnjvsuf.streamlit.app/",
 
-  featured: true,
+  featured: false,
 }
 ];
