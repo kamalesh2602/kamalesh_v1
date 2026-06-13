@@ -19,7 +19,11 @@ function Hero() {
         <div className="mx-auto mb-8 inline-flex items-center gap-2 rounded-full border border-white/5 bg-white/[0.02] px-4 py-1.5 shadow-inner backdrop-blur-md">
           <span className="h-1.5 w-1.5 rounded-full bg-[#FFD700] shadow-[0_0_8px_#FFD700]" />
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#FFE5B4]">
-            Computer Science Student • PSG Tech
+            Computer Science Student
+          </p>
+          <span className="h-1.5 w-1.5 rounded-full bg-[#FFD700] shadow-[0_0_8px_#FFD700]" />
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#FFE5B4]">
+            PSG Tech
           </p>
         </div>
 
