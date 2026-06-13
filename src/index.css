@@ -6,17 +6,17 @@ html {
 
 body {
   font-family: Inter, sans-serif;
-  background-color: #0f0c20; /* Sets your global backdrop color */
+  background-color: #0a0a0c; /* High-end obsidian background canvas */
 }
 
 /* 
-  Human-Engineered Cyber Grid Overlay:
-  Creates an ultra-faint, 40px blueprint grid lines texture 
-  to make your backgrounds look structured, not AI-blurry.
+  Human-Engineered Warm Cyber Grid Overlay:
+  Creates faint, 40px blueprint line grids with a delicate peach tint
+  to give your layout structure and visual grounding.
 */
 .cyber-grid {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 229, 180, 0.008) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 229, 180, 0.008) 1px, transparent 1px);
 }

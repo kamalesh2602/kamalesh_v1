@@ -14,22 +14,22 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-gradient-to-br from-[#0f0c20] via-[#120e2e] to-[#1a0b36] py-28 text-white cyber-grid"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0a0a0c] via-[#111114] to-[#0d0d11] py-28 text-white cyber-grid"
     >
-      {/* High-definition architectural lighting vector meshes */}
-      <div className="absolute top-0 right-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_top_right,rgba(167,139,250,0.05),transparent_40%)] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_bottom_left,rgba(34,211,238,0.04),transparent_40%)] pointer-events-none" />
+      {/* Refined Minimalist Light Meshes */}
+      <div className="absolute top-0 right-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_top_right,rgba(255,229,180,0.02),transparent_40%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,127,80,0.02),transparent_40%)] pointer-events-none" />
 
       {/* Header Container */}
       <div className="mx-auto max-w-6xl px-6 mb-16">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 shadow-inner backdrop-blur-md">
-          <FaTerminal size={12} className="text-cyan-400" />
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-cyan-300">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/5 bg-white/[0.02] px-4 py-1.5 shadow-inner backdrop-blur-md">
+          <FaTerminal size={12} className="text-[#FFD700]" />
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#FFE5B4]">
             Capabilities
           </p>
         </div>
 
-        <h2 className="text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-neutral-400 sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+        <h2 className="text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-200 to-neutral-500 sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
             Tech Stack
         </h2>
       </div>
@@ -62,8 +62,8 @@ function Skills() {
           0% { transform: translateX(-33.33%); }
           100% { transform: translateX(0%); }
         }
-        .animate-marquee-left { animation: marqueeLeft 28s linear infinite; }
-        .animate-marquee-right { animation: marqueeRight 28s linear infinite; }
+        .animate-marquee-left { animation: marqueeLeft 30s linear infinite; }
+        .animate-marquee-right { animation: marqueeRight 30s linear infinite; }
         .marquee-container:hover .marquee-content { animation-play-state: paused !important; }
         .mask-fade-edges {
           mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
@@ -77,14 +77,14 @@ function Skills() {
 function SkillTag({ skill, index }: SkillTagProps) {
   const isEven = index % 2 === 0;
   const glowStyles = isEven 
-    ? "hover:from-cyan-500/30 hover:to-blue-500/30 hover:border-cyan-400/60 hover:text-cyan-200 hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
-    : "hover:from-violet-500/30 hover:to-rose-500/30 hover:border-violet-400/60 hover:text-violet-200 hover:shadow-[0_0_25px_rgba(167,139,250,0.35)]";
+    ? "hover:from-[#FFD700]/15 hover:to-[#FF7F50]/15 hover:border-[#FFD700]/40 hover:text-[#FFE5B4] hover:shadow-[0_0_25px_rgba(255,215,0,0.15)]"
+    : "hover:from-[#FF7F50]/15 hover:to-[#FFE5B4]/15 hover:border-[#FF7F50]/40 hover:text-white hover:shadow-[0_0_25px_rgba(255,127,80,0.15)]";
 
   return (
     <span
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] px-7 py-3.5 text-base font-bold tracking-wide text-neutral-200 shadow-[0_4px_12px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-gradient-to-r cursor-pointer whitespace-nowrap ${glowStyles}`}
+      className={`group relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.03] px-7 py-3.5 text-base font-bold tracking-wide text-neutral-300 shadow-[0_4px_12px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.05)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-gradient-to-r cursor-pointer whitespace-nowrap ${glowStyles}`}
     >
-      <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full transition-transform duration-1000 ease-out group-hover:translate-x-full" />
+      <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full transition-transform duration-1000 ease-out group-hover:translate-x-full" />
       <span className="relative z-10">{skill}</span>
     </span>
   );
