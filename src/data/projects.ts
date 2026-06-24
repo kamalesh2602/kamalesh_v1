@@ -349,5 +349,123 @@ export const projects = [
   live: "https://langchainlearningassistant-hnluvddvefjgzdvmnjvsuf.streamlit.app/",
 
   featured: false,
-}
+},
+{
+  title: "CogniDesk",
+  slug: "cognidesk",
+
+  shortDescription:
+    "AI-powered workspace for document analysis, semantic search, and Retrieval-Augmented Generation.",
+
+  overview:
+    "CogniDesk is an AI workspace that enables users to upload documents, generate embeddings, perform semantic search, and interact with documents through Retrieval-Augmented Generation. The system combines React, FastAPI, Qdrant, and modern AI tooling to create a practical knowledge management platform.",
+
+  problem:
+    "Finding relevant information across multiple documents is time-consuming and traditional keyword search often fails to capture semantic meaning.",
+
+  solution:
+    "Built a workspace-driven RAG platform that processes documents, generates embeddings, stores vectors in Qdrant, and enables intelligent retrieval and question answering.",
+
+  features: [
+    "Workspace management",
+    "Document upload",
+    "Automatic chunking",
+    "Embedding generation",
+    "Qdrant vector storage",
+    "Semantic search",
+    "RAG-powered chat",
+    "Dockerized deployment"
+  ],
+
+  challenges: [
+    "Designing scalable document processing pipelines",
+    "Managing vector database integration",
+    "Building efficient retrieval workflows",
+    "Coordinating React and FastAPI services"
+  ],
+
+  learnings: [
+    "RAG architecture",
+    "Vector databases",
+    "Embedding pipelines",
+    "FastAPI backend development",
+    "Docker deployment"
+  ],
+
+  tech: [
+    "React",
+    "TypeScript",
+    "FastAPI",
+    "Python",
+    "Qdrant",
+    "Docker",
+    "SentenceTransformers"
+  ],
+
+  screenshots: [],
+  image: "",
+
+  github: "https://github.com/kamalesh2602/CogniDesk",
+  live: "",
+
+  featured: false,
+},
+{
+  title: "LostIt",
+  slug: "lostit",
+
+  shortDescription:
+    "React Native application for reporting, tracking, and recovering lost and found items.",
+
+  overview:
+    "LostIt is a mobile application built using React Native and Expo that helps users report lost items, browse found items, and connect with item owners through a simple and accessible interface.",
+
+  problem:
+    "Lost-and-found information is often fragmented across social media, messaging groups, and local communities, making recovery difficult.",
+
+  solution:
+    "Created a centralized mobile platform where users can report, discover, and track lost or found items in one place.",
+
+  features: [
+    "Lost item reporting",
+    "Found item reporting",
+    "Item browsing",
+    "Search and filtering",
+    "Status tracking",
+    "Image support",
+    "Pull-to-refresh updates",
+    "Mobile-first experience"
+  ],
+
+  challenges: [
+    "Managing mobile state efficiently",
+    "Handling image workflows",
+    "Designing intuitive mobile UI",
+    "Working with Expo and React Native ecosystem"
+  ],
+
+  learnings: [
+    "React Native development",
+    "Expo ecosystem",
+    "Mobile navigation",
+    "State management",
+    "Mobile UI design"
+  ],
+
+  tech: [
+    "React Native",
+    "Expo",
+    "Node.js",
+    "Express",
+    "MongoDB"
+  ],
+
+  screenshots: [],
+  image: "projects/lostit.png",
+
+  github: "https://github.com/kamalesh2602/LostIt",
+  live: "",
+
+  featured: false,
+},
 ];
