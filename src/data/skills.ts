@@ -11,4 +11,5 @@ export const skills = [
   "Git",
   "GitHub",
   "Postman",
+  "Docker",
 ];
